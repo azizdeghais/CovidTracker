@@ -1,0 +1,7 @@
+.countries-list{
+    display:flex;
+    flex-direction:row;
+    width: '1000px';
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
