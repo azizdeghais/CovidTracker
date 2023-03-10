@@ -105,7 +105,7 @@ function App() {
     <>
     <Nav/>
     <Container>
-    <div  style={{height:'400px',marginBottom:'50px',display:'flex',flexDirection:'row',justifyContent:'center'}}>
+    <div  style={{width:'100px',height:'400px',marginBottom:'50px',display:'flex',flexDirection:'row',justifyContent:'center'}}>
         <PieChart chartData={chartData}/>
     </div>
 
