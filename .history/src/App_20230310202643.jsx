@@ -30,7 +30,7 @@ function App() {
     labels: Data.map((data) => data.year), 
     datasets: [
       {
-        label: "Users Gained",
+        label: "Users Gained ",
         data: Data.map((data) => data.userGain),
         backgroundColor: [
           "#50AF95",

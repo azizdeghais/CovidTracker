@@ -30,15 +30,17 @@ function App() {
     labels: Data.map((data) => data.year), 
     datasets: [
       {
-        label: "Users Gained",
+        label: "Users Gained ",
         data: Data.map((data) => data.userGain),
         backgroundColor: [
+          "rgba(75,192,192,1)",
+          "#50AF95",
           "#50AF95",
           "#f3ba2f",
           "#2a71d0"
         ],
         borderColor: "black",
-        borderWidth: 0
+        borderWidth: 2
       }
     ]
   })
@@ -105,7 +107,7 @@ function App() {
     <>
     <Nav/>
     <Container>
-    <div  style={{width:'1000px',height:'400px',marginBottom:'50px',display:'flex',flexDirection:'row',justifyContent:'center'}}>
+    <div  style={{width:'1000px',height:'300px',marginBottom:'100px',display:'flex'}}>
         <PieChart chartData={chartData}/>
     </div>
 

@@ -1,10 +1,6 @@
 import React, { useEffect,useState } from 'react'
-
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
-import PieChart from './components/PieChart';
-import { Data } from './utils/Data';
-
 
 import axios from 'axios'
 import Container from 'react-bootstrap/Container';
@@ -13,16 +9,10 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
 import Form from 'react-bootstrap/Form';
-
-
-
+import PieChart from './components/PieChart';
+import { Data } from './utils/Data';
 import './App.css'
 import Nav from './components/Nav';
-
-
-
-Chart.register(CategoryScale);
-
 
 function App() {
 
@@ -30,15 +20,17 @@ function App() {
     labels: Data.map((data) => data.year), 
     datasets: [
       {
-        label: "Users Gained",
+        label: "Users Gained ",
         data: Data.map((data) => data.userGain),
         backgroundColor: [
+          "rgba(75,192,192,1)",
+          "#50AF95",
           "#50AF95",
           "#f3ba2f",
           "#2a71d0"
         ],
         borderColor: "black",
-        borderWidth: 0
+        borderWidth: 2
       }
     ]
   })
@@ -105,9 +97,8 @@ function App() {
     <>
     <Nav/>
     <Container>
-    <div  style={{width:'1000px',height:'400px',marginBottom:'50px',display:'flex',flexDirection:'row',justifyContent:'center'}}>
-        <PieChart chartData={chartData}/>
-    </div>
+      <PieChart chartData={Data}/>
+
 
       <Row className='mb-3'>
         <Col>
